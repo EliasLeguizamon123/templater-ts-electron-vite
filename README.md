@@ -1,35 +1,19 @@
 # electron-vite-react
 
-[![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite)
-![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/vite-react-electron?color=fa6470)
-![GitHub issues](https://img.shields.io/github/issues/caoxiemeihao/vite-react-electron?color=d8b22d)
-![GitHub license](https://img.shields.io/github/license/caoxiemeihao/vite-react-electron)
-[![Required Node.JS >= 14.18.0 || >=16.0.0](https://img.shields.io/static/v1?label=node&message=14.18.0%20||%20%3E=16.0.0&logo=node.js&color=3f893e)](https://nodejs.org/about/releases)
-
-English | [简体中文](README.zh-CN.md)
-
 ## 👀 Overview
+. based on [electron-vite/electron-vite-react](https://github.com/electron-vite/electron-vite-react) but with differences.
+. Chakra ui for visuals
+. Eslint
+. Clean Architecture
 
-📦 Ready out of the box  
-🎯 Based on the official [template-react-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts), project structure will be familiar to you  
-🌱 Easily extendable and customizable  
-💪 Supports Node.js API in the renderer process  
-🔩 Supports C/C++ native addons  
-🐞 Debugger configuration included  
-🖥 Easy to implement multiple windows  
-
-## 🛫 Quick start
+## 🛫 Usage
 
 ```sh
-npm create electron-vite
+git clone https://github.com/EliasLeguizamon123/templater-ts-electron-vite
+cd caja-magnetic-cash
+npm install
+npm run dev
 ```
-
-![electron-vite-react.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react.gif?raw=true)
-
-## 🐞 Debug
-
-![electron-vite-react-debug.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react-debug.gif?raw=true)
-
 ## 📂 Directory structure
 
 Familiar React application structure, just with `electron` folder on the top :wink:  
@@ -52,24 +36,10 @@ Familiar React application structure, just with `electron` folder on the top :wi
 │
 ├── public                    Static assets
 └── src                       Renderer source code, your React application
+    ├── models                Contains all models for your React application
+    ├── routes                Contains all routes for your project
+    ├── theme                 Contains your Chakra Theme provider 
+    ├── pages                 Contains all pages for your React application
+    ├── components            Contains all components for your React application
+    └── services              Contains all services for your React application
 ```
-
-## 🚨 Be aware
-
-This template integrates Node.js API to the renderer process by default. If you want to follow **Electron Security Concerns** you might want to disable this feature. You will have to expose needed API by yourself.  
-
-To get started, remove the option as shown below. This will [modify the Vite configuration and disable this feature](https://github.com/electron-vite/vite-plugin-electron/tree/main/packages/electron-renderer#config-presets-opinionated).
-
-```diff
-# vite.config.ts
-
-electron({
-- renderer: {}
-})
-```
-
-## ❔ FAQ
-
-- [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron/tree/main/packages/electron-renderer#dependencies-vs-devdependencies)
-- [Using C/C++ native addons in renderer](https://github.com/electron-vite/vite-plugin-electron/tree/main/packages/electron-renderer#load-nodejs-cc-native-modules)
-- [Node.js ESM packages](https://github.com/electron-vite/vite-plugin-electron/tree/main/packages/electron-renderer#nodejs-esm-packages) (e.g. `execa` `node-fetch`)
