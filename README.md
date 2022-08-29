@@ -1,10 +1,10 @@
 # electron-vite-react
 
 ## 👀 Overview
-. based on [electron-vite/electron-vite-react](https://github.com/electron-vite/electron-vite-react) but with differences.
-. Chakra ui for visuals
-. Eslint
-. Clean Architecture
+- based on [electron-vite/electron-vite-react](https://github.com/electron-vite/electron-vite-react) but with differences.
+- Chakra ui for visuals
+- Eslint
+- Clean Architecture
 
 ## 🛫 Usage
 
