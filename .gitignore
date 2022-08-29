@@ -22,7 +22,7 @@ dist-ssr
 *.sw?
 
 release
-.vscode/.debug.env
+.vscode/
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
