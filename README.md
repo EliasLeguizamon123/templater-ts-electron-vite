@@ -10,7 +10,7 @@
 
 ```sh
 git clone https://github.com/EliasLeguizamon123/templater-ts-electron-vite
-cd caja-magnetic-cash
+cd templater-ts-electron-vite
 npm install
 npm run dev
 ```
