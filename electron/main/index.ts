@@ -31,8 +31,10 @@ const indexHtml = join(ROOT_PATH.dist, 'index.html');
 
 async function createWindow() {
     win = new BrowserWindow({
-        title: 'Main window',
+        title: 'Template Electron-Vite-TS',
         icon: join(ROOT_PATH.public, 'favicon.svg'),
+        width: 1400,
+        height: 800,
         webPreferences: {
             preload,
             nodeIntegration: true,
