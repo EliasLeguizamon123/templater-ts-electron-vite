@@ -1,9 +1,6 @@
 import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { release } from 'os';
-import * as macaddress from 'macaddress';
-import * as os from 'os';
 import { join } from 'path';
-import { net } from 'electron';
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -30,16 +27,7 @@ let win: BrowserWindow | null = null;
 const preload = join(__dirname, '../preload/index.js');
 const url = process.env.VITE_DEV_SERVER_URL;
 const indexHtml = join(ROOT_PATH.dist, 'index.html');
-const hostName: string = os.hostname(); //* Get Host Name
 
-let macAddress = '';
-
-// Get Mac Address
-macaddress.one((err, mac) => {
-    mac = mac.split(':').join('');
-
-    macAddress = mac;
-});
 
 async function createWindow() {
     win = new BrowserWindow({
@@ -116,31 +104,6 @@ ipcMain.handle('open-win', (event, arg) => {
     }
 });
 
-async function req() {
-    const request = net.request({
-        url: 'http://192.168.1.161:8000/slave-login',
-        method: 'POST',
-    });
-
-    request.on('response', (response) => {
-        const data = [];
-
-        response.on('data', (chunk) => {
-            data.push(chunk);
-        });
-    });
-
-    const body = JSON.stringify({
-        username: 'mcash',
-        password: 'mcash',
-        device_id: macAddress,
-        name: 'REDEMPTION', //can be CASHIER || REDEMPTION for the moment
-    });
-
-    request.setHeader('Content-Type', 'application/json');
-    request.write(body, 'utf-8');
-    request.end();
-}
 
 ipcMain.on('closeApp', () => {
     app.quit();

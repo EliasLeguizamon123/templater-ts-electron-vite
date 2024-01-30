@@ -97,8 +97,6 @@ setTimeout(removeLoading, 500);
 import { contextBridge, ipcRenderer } from 'electron';
 
 const api = {
-    token: (data) => ipcRenderer.on('token', data),
-    getBack: () => ipcRenderer.sendSync('getBack'),
     closeApp: () => ipcRenderer.send('closeApp'),
 };
 
