@@ -1,7 +1,7 @@
 # electron-vite-react
 
 ## 🖼️ Demo image
-![image](https://github.com/EliasLeguizamon123/templater-ts-electron-vite/assets/25516473/5ab8df87-c7fc-450c-8877-80d93d0e4da4)
+![image](https://raw.githubusercontent.com/EliasLeguizamon123/templater-ts-electron-vite/master/wallpaper.webp)
 
 ## 👀 Overview
 - based on [electron-vite/electron-vite-react](https://github.com/electron-vite/electron-vite-react) but with differences.
