@@ -6,7 +6,7 @@
 ## 👀 Overview
 - based on [electron-vite/electron-vite-react](https://github.com/electron-vite/electron-vite-react) but with differences.
 - Chakra for UI
-- Eslint
+- Eslint for code rules
 - Clean Architecture
 
 ## 🛫 Usage
